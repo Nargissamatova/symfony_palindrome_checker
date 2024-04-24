@@ -1,0 +1,44 @@
+/* public/css/styles.css */
+
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.result-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.result {
+    font-size: 18px;
+}
