@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	Palindrome checker
+{% endblock %}
+{% block body %}
+	<main class="container">
+		<div>
+			<label class="label" for="component-name">
+				Enter your word
+			</label>
+			<form method="get" action="{{ path('form') }}">
+				<input type="text" name="word" class="input" placeholder="Any word" id="your-word" autocomplete="off"/>
+			</form>
+		</div>
+	</main>
+{% endblock %}
