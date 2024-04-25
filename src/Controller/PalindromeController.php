@@ -12,10 +12,12 @@ class PalindromeController extends AbstractController
     public function checker(Request $request)
     {
         $word = $request->query->get('word', '');
-        $wordResult = ' ';
+        $wordResult = '';
         if (!empty($word)) {
         }
 
-        return $this->render('form/index.html.twig');
+        return $this->render('form/index.html.twig', [
+            'word' => $word
+        ]);
     }
 }
