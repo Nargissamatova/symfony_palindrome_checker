@@ -13,11 +13,14 @@ class PalindromeController extends AbstractController
     {
         $word = $request->query->get('word', '');
         $answer = '';
-        $reversedWord = '';
-        if (!empty($word)) {
-            $reversedWord = strrev($word);
-            if ($word === $reversedWord) {
-                $answer = ' is a palindrome!';
+
+        // Remove whitespace from the input string
+        $cleanedWord = preg_replace('/\s+/', '', $word);
+
+        if (!empty($cleanedWord)) {
+            $reversedWord = strrev($cleanedWord);
+            if ($cleanedWord === $reversedWord) {
+                $answer = 'is a palindrome!';
             } else {
                 $answer = 'is not a palindrome';
             }
@@ -27,8 +30,8 @@ class PalindromeController extends AbstractController
 
         return $this->render('form/index.html.twig', [
             'word' => $word,
-            'reversedWord' => $reversedWord,
             'answer' => $answer,
+            'reversedWord' => $reversedWord,
         ]);
     }
 }
