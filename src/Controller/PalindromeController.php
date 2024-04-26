@@ -12,12 +12,23 @@ class PalindromeController extends AbstractController
     public function checker(Request $request)
     {
         $word = $request->query->get('word', '');
-        $wordResult = '';
+        $answer = '';
+        $reversedWord = '';
         if (!empty($word)) {
+            $reversedWord = strrev($word);
+            if ($word === $reversedWord) {
+                $answer = ' is a palindrome!';
+            } else {
+                $answer = 'is not a palindrome';
+            }
+        } else {
+            $answer = 'No results';
         }
 
         return $this->render('form/index.html.twig', [
-            'word' => $word
+            'word' => $word,
+            'reversedWord' => $reversedWord,
+            'answer' => $answer,
         ]);
     }
 }

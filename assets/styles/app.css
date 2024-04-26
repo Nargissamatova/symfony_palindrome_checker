@@ -15,8 +15,19 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+form {
+    display: flex;
+}
+
 .input-container {
     margin-bottom: 20px;
+    margin: 2em auto;
+
+}
+
+.result-container {
+    margin: 1em auto;
+
 }
 
 .label {
@@ -52,4 +63,20 @@ body {
     border: 2px solid #4CAF50;
     border-radius: 5px;
     background-color: #f2f9f2;
+}
+
+button {
+    padding: 12px;
+    margin-left: 0.5em;
+    font-size: 18px;
+    color: #fff;
+    background-color: #6d07d3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
