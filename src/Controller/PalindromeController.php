@@ -26,6 +26,7 @@ class PalindromeController extends AbstractController
             }
         } else {
             $answer = 'No results';
+            $reversedWord = '';
         }
 
         return $this->render('form/index.html.twig', [
